@@ -143,7 +143,7 @@ const copy = {
 
 const featureIcons = [Layers3, PackageOpen, ArrowDownToLine, Shirt];
 const screens = [
-  { light: "launcher.png", dark: "home-dark.png" },
+  { light: "demo-home-light.png", dark: "demo-home-dark.png" },
   { light: "content-light.png", dark: "content-dark.png" },
   { light: "skins-light.png", dark: "skins-dark.png" },
 ];
@@ -372,14 +372,25 @@ function App() {
         <section className="loaders container" aria-label={t.loaders}>
           <span className="loaders-label">{t.loaders}</span>
           <div>
-            {["Vanilla", "Fabric", "Forge", "NeoForge", "Quilt"].map(
-              (loader, i) => (
-                <span key={loader}>
-                  <i className={`loader-mark loader-${i}`} aria-hidden="true" />
-                  {loader}
-                </span>
-              ),
-            )}
+            {[
+              { name: "Vanilla", icon: "vanilla.png" },
+              { name: "Fabric", icon: "fabric.png" },
+              { name: "Forge", icon: "forge.svg" },
+              { name: "NeoForge", icon: "neoforge.svg" },
+              { name: "Quilt", icon: "quilt.svg" },
+            ].map(({ name, icon }) => (
+              <span key={name} className="loader-item">
+                <img
+                  className={`loader-icon loader-icon-${name.toLowerCase()}`}
+                  src={asset(`loaders/${icon}`)}
+                  alt=""
+                  width="24"
+                  height="24"
+                  aria-hidden="true"
+                />
+                {name}
+              </span>
+            ))}
           </div>
         </section>
         <section
