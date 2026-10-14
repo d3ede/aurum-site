@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#faf8f2" />
+    <meta
+      name="description"
+      content="Aurum Launcher — an independent Minecraft Java launcher for Windows. Instances, mods, loaders, skins, and imports."
+    />
+    <meta property="og:title" content="Aurum Launcher" />
+    <meta
+      property="og:description"
+      content="Minecraft Java. Instances, mods, and skins in one launcher."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="./assets/aurum.svg" />
+    <title>Aurum Launcher — Minecraft Java</title>
+    <script>
+      try {
+        const saved = localStorage.getItem("aurum-site-theme");
+        const theme =
+          saved === "light" || saved === "dark"
+            ? saved
+            : matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+        document.documentElement.dataset.theme = theme;
+        document.querySelector('meta[name="theme-color"]').content =
+          theme === "dark" ? "#181d1c" : "#faf8f2";
+      } catch {
+        document.documentElement.dataset.theme = "light";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
