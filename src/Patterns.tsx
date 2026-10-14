@@ -1,3 +1,23 @@
+export function DownloadPattern() {
+  return (
+    <svg
+      className="download-pattern"
+      viewBox="0 0 1320 240"
+      preserveAspectRatio="none"
+      fill="none"
+      aria-hidden="true"
+    >
+      {[0, 1, 2, 3].map((line) => (
+        <path
+          key={line}
+          vectorEffect="non-scaling-stroke"
+          d={`M ${520 + line * 24} -25 C ${680 + line * 18} 80, ${810 + line * 13} 34, ${980 + line * 12} 110 S ${1180 + line * 20} 203, ${1210 + line * 28} 275`}
+        />
+      ))}
+    </svg>
+  );
+}
+
 export function TerrainPattern() {
   return (
     <svg

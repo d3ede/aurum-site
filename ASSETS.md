@@ -2,8 +2,10 @@
 
 - `public/assets/aurum.svg`: approved Aurum logo from the launcher repository.
 - `src/Patterns.tsx`: original procedural vector patterns copied from the launcher's `src/components/TerrainPattern.tsx`.
-- `public/assets/demo-home-light.png` and `demo-home-dark.png`: newly captured English launcher UI with isolated demonstration fixtures (Player account, Survival and Creative instances). No personal launcher data is read.
-- Gallery content and skin screenshots: existing launcher UI test screenshots in `.test-data/screenshots/`, showing demonstration data in light and dark themes.
+- `public/assets/demo-home-light.png` and `demo-home-dark.png`: newly captured English launcher UI with isolated demonstration fixtures (Player account and Survival instance). Project names, descriptions and icons come from public Modrinth metadata. No personal launcher data is read.
+- `public/assets/content-light.png` and `content-dark.png`: English content-manager previews captured at 1440 × 960, showing the complete table with project icons.
+- `public/assets/skins-light.png` and `skins-dark.png`: English skin-library previews captured at 1440 × 1410, showing the full character, saved skins and all nine defaults. All screenshots use isolated demonstration data in both themes.
+- Project icons visible inside screenshots belong to their respective projects: [Fabric API](https://modrinth.com/mod/fabric-api), [Sodium](https://modrinth.com/mod/sodium), [Iris](https://modrinth.com/mod/iris), [Lithium](https://modrinth.com/mod/lithium), and [Entity Culling](https://modrinth.com/mod/entityculling). They are obtained from the projects' public Modrinth icon URLs and are not relicensed under this site's license.
 - `public/assets/modrinth.svg`: [official Modrinth logo](https://github.com/modrinth/code/blob/main/apps/frontend/src/assets/images/logo.svg). Branding belongs to Rinth, Inc.; see [upstream notice](https://github.com/modrinth/code/blob/main/apps/frontend/COPYING.md).
 - `public/assets/curseforge.svg`: original CurseForge mark from [Simple Icons](https://github.com/simple-icons/simple-icons/blob/develop/icons/curseforge.svg), distributed under [CC0](https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md). Trademark belongs to its owner.
 - Inter Variable: bundled by `@fontsource-variable/inter`, under the SIL Open Font License 1.1 (included in `public/assets/INTER-LICENSE.txt`).

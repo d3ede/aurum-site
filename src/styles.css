@@ -514,45 +514,63 @@ p {
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   text-align: center;
-  padding: 22px 0 25px;
+  padding: 30px 0 34px;
 }
 .loaders-label {
-  font-size: 10px;
+  font-size: 12px;
   color: var(--muted);
 }
 .loaders > div {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   align-items: center;
   justify-content: center;
-  gap: 70px;
-  margin-top: 20px;
+  gap: 32px;
+  max-width: 1020px;
+  margin: 25px auto 0;
 }
 .loaders > div > span {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 11px;
+  gap: 14px;
   color: var(--secondary);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: -0.3px;
 }
 .loader-item {
   transition: color 0.2s;
 }
+.loader-mark {
+  width: 104px;
+  height: 104px;
+  display: grid;
+  place-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  transition:
+    background 0.25s,
+    border-color 0.25s;
+}
+.loader-item:hover .loader-mark {
+  border-color: var(--accent);
+  background: var(--hover);
+}
 .loader-item:hover {
   color: var(--text);
 }
 .loader-icon {
-  width: 24px;
-  height: 24px;
+  width: 72px;
+  height: 72px;
   flex-shrink: 0;
   object-fit: contain;
   filter: grayscale(1);
-  opacity: 0.7;
+  opacity: 0.9;
   transition:
     filter 0.25s,
-    opacity 0.25s,
-    transform 0.25s;
+    opacity 0.25s;
 }
 .loader-icon-vanilla,
 .loader-icon-fabric {
@@ -573,7 +591,6 @@ p {
 .loader-item:hover .loader-icon {
   filter: none;
   opacity: 1;
-  transform: translateY(-2px);
 }
 .loader-item:hover .loader-icon-forge {
   filter: brightness(0);
@@ -586,23 +603,28 @@ p {
 .features {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding: 44px 0 67px;
+  padding: 30px 8px;
+  margin-top: 24px;
+  margin-bottom: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
 }
 .features article {
-  padding: 0 29px;
+  padding: 0 24px;
   border-right: 1px solid var(--border);
   position: relative;
   transition: transform 0.3s;
 }
 .features article:first-child {
-  padding-left: 0;
+  padding-left: 24px;
 }
 .features article:last-child {
   border: 0;
-  padding-right: 0;
+  padding-right: 24px;
 }
 .features article:hover {
-  transform: translateY(-4px);
+  transform: none;
 }
 .feature-icon {
   width: 43px;
@@ -615,26 +637,18 @@ p {
   color: var(--accent);
   transition: background 0.2s;
 }
-.feature-number {
-  position: absolute;
-  top: 15px;
-  right: 27px;
-  font-size: 9px;
-  font-family: monospace;
-  color: var(--muted);
-}
 .features h2 {
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: -0.3px;
   font-weight: 600;
-  margin-top: 21px;
+  margin-top: 17px;
 }
 .features p {
-  font-size: 12px;
-  line-height: 1.9;
+  font-size: 13px;
+  line-height: 1.75;
   color: var(--secondary);
   margin-top: 10px;
-  max-width: 225px;
+  max-width: 265px;
 }
 .interface-section {
   padding: 46px 0 88px;
@@ -693,7 +707,7 @@ p {
   background: var(--gold-soft);
 }
 .gallery-screen {
-  padding: 30px 8%;
+  padding: 16px;
   background: radial-gradient(
     ellipse at 50% 40%,
     var(--gold-soft),
@@ -712,7 +726,7 @@ p {
 }
 .gallery-screen img {
   width: 100%;
-  aspect-ratio: 1280/820;
+  height: auto;
   object-fit: contain;
   background: var(--bg);
   animation: fade-in 0.4s ease;
@@ -801,6 +815,17 @@ p {
   gap: 30px;
   padding: 43px 44px;
   margin-bottom: 67px;
+}
+.download-pattern {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  stroke: var(--gold);
+  stroke-width: 1.2;
+  opacity: 0.22;
+  shape-rendering: geometricPrecision;
+  pointer-events: none;
 }
 .download-section > div,
 .download-section > a {
@@ -1020,7 +1045,7 @@ body:has(dialog[open]) {
     padding: 11px 13px;
   }
   .loaders > div {
-    gap: 45px;
+    gap: 22px;
   }
   .features article {
     padding: 0 22px;
@@ -1107,15 +1132,15 @@ body:has(dialog[open]) {
     bottom: 35px;
   }
   .loaders > div {
-    gap: 30px;
+    gap: 16px;
   }
   .features {
     grid-template-columns: 1fr 1fr;
-    padding-bottom: 40px;
+    padding: 26px;
     row-gap: 33px;
   }
   .features article {
-    padding: 0 25px;
+    padding: 0 18px;
   }
   .features article:nth-child(odd) {
     padding-left: 0;
@@ -1134,7 +1159,7 @@ body:has(dialog[open]) {
     font-size: 32px;
   }
   .gallery-screen {
-    padding: 20px 4%;
+    padding: 12px;
   }
   .project-section {
     gap: 35px;
@@ -1311,26 +1336,30 @@ body:has(dialog[open]) {
     left: 17px;
   }
   .loaders {
-    padding: 19px 0 20px;
+    padding: 24px 0;
   }
   .loaders-label {
-    font-size: 9px;
+    font-size: 11px;
   }
   .loaders > div {
-    gap: 14px;
-    flex-wrap: wrap;
-    margin-top: 17px;
+    gap: 8px;
+    margin-top: 20px;
   }
   .loaders > div > span {
-    font-size: 11px;
-    gap: 6px;
+    font-size: 12px;
+    gap: 10px;
+  }
+  .loader-mark {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
   }
   .loader-icon {
-    width: 18px;
-    height: 18px;
+    width: 40px;
+    height: 40px;
   }
   .features {
-    padding: 32px 0 28px;
+    padding: 22px 18px;
     row-gap: 30px;
   }
   .features article {
@@ -1338,10 +1367,6 @@ body:has(dialog[open]) {
   }
   .features article:nth-child(odd) {
     padding-right: 18px;
-  }
-  .feature-number {
-    right: 18px;
-    font-size: 8px;
   }
   .feature-icon {
     width: 37px;
@@ -1384,7 +1409,7 @@ body:has(dialog[open]) {
     font-size: 10px;
   }
   .gallery-screen {
-    padding: 14px 12px;
+    padding: 8px;
   }
   .gallery-caption {
     font-size: 8px;

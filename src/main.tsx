@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import {
-  ArrowDown,
   ArrowDownToLine,
   ArrowRight,
   ArrowUpRight,
@@ -18,7 +17,7 @@ import {
   X,
 } from "lucide-react";
 import "@fontsource-variable/inter";
-import { HomePattern, TerrainPattern, SidebarPattern } from "./Patterns";
+import { DownloadPattern, TerrainPattern } from "./Patterns";
 import "./styles.css";
 
 type Language = "ru" | "en";
@@ -362,11 +361,6 @@ function App() {
               </div>
               <Check size={17} className="tag-check" />
             </div>
-            <a className="visual-caption" href="#interface">
-              <span className="status-dot" />
-              {t.preview}
-              <ArrowDown size={14} />
-            </a>
           </div>
         </section>
         <section className="loaders container" aria-label={t.loaders}>
@@ -380,15 +374,17 @@ function App() {
               { name: "Quilt", icon: "quilt.svg" },
             ].map(({ name, icon }) => (
               <span key={name} className="loader-item">
-                <img
-                  className={`loader-icon loader-icon-${name.toLowerCase()}`}
-                  src={asset(`loaders/${icon}`)}
-                  alt=""
-                  width="24"
-                  height="24"
-                  aria-hidden="true"
-                />
-                {name}
+                <span className="loader-mark">
+                  <img
+                    className={`loader-icon loader-icon-${name.toLowerCase()}`}
+                    src={asset(`loaders/${icon}`)}
+                    alt=""
+                    width="72"
+                    height="72"
+                    aria-hidden="true"
+                  />
+                </span>
+                <span className="loader-name">{name}</span>
               </span>
             ))}
           </div>
@@ -405,7 +401,6 @@ function App() {
                 <span className="feature-icon">
                   <Icon size={23} strokeWidth={1.6} />
                 </span>
-                <span className="feature-number">0{i + 1}</span>
                 <h2>{title}</h2>
                 <p>{text}</p>
               </article>
@@ -533,8 +528,7 @@ function App() {
           </div>
         </section>
         <section className="download-section container reveal">
-          <HomePattern />
-          <SidebarPattern />
+          <DownloadPattern />
           <div>
             <span className="eyebrow">AURUM / WINDOWS</span>
             <h2>{t.ready}</h2>
