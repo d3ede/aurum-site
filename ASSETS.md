@@ -2,7 +2,8 @@
 
 - `public/assets/aurum.svg`: approved Aurum logo from the launcher repository.
 - `src/Patterns.tsx`: original procedural vector patterns copied from the launcher's `src/components/TerrainPattern.tsx`.
-- `src/FeatureVisuals.tsx`: original code-based illustrations of instance cards, content updates, import and skin selection. The block-style character is a stylized vector illustration, not a Minecraft skin texture; miniature UI elements are decorative, not interactive controls.
+- `src/FeatureVisuals.tsx`: compact code-based previews of instance cards, content updates, import and skin selection. Miniature UI elements are decorative, not interactive controls.
+- `public/assets/steve-preview.png`: locally rendered official Minecraft wide Steve texture from the launcher, using Aurum's SkinViewer 3.4.2 rendering pipeline and a fixed walking pose. Transparent 240 × 320 PNG; no generated artwork or runtime 3D renderer is used on the site. The underlying texture belongs to Mojang/Microsoft.
 - `public/assets/demo-home-light.png` and `demo-home-dark.png`: newly captured English launcher UI with isolated demonstration fixtures (Player account and Survival instance). Project names, descriptions and icons come from public Modrinth metadata. No personal launcher data is read.
 - `public/assets/content-light.png` and `content-dark.png`: English content-manager previews captured at 1440 × 960, showing the complete table with project icons.
 - `public/assets/skins-light.png` and `skins-dark.png`: English skin-library previews captured at 1440 × 1410, showing the full character, saved skins and all nine defaults. All screenshots use isolated demonstration data in both themes.
@@ -18,7 +19,7 @@ Screenshots include Minecraft character textures owned by Mojang/Microsoft. They
 
 These official marks identify supported loaders. Their geometry and ownership are preserved; CSS applies a muted monochrome treatment at rest and restores their colors on hover.
 
-Forge and NeoForge viewports are trimmed to the artwork bounds without changing their paths. Visible artwork shares one horizontal center line, with the wider Forge mark enlarged to balance its visual size. Loader names share a baseline and use an accent color on hover. No extra frames or backgrounds are added around the logos.
+Forge and NeoForge viewports are trimmed to the artwork bounds without changing their paths. Visible artwork shares one horizontal center line, with the wider Forge mark scaled to balance its visual size. Quilt has a small optical horizontal correction to center its main quilt shape over the name. Loader names share a baseline and use an accent color on hover. No extra frames or backgrounds are added around the logos.
 
 - Vanilla: [Minecraft website favicon](https://www.minecraft.net/etc.clientlibs/minecraftnet/clientlibs/clientlib-site/resources/favicon-96x96.png), Mojang/Microsoft. Vanilla has no separate loader logo.
 - Fabric: [official Fabric logo](https://fabricmc.net/assets/logo.png). Fabric website content is under [CC BY-NC-SA 4.0](https://fabricmc.net/), unless otherwise indicated.

@@ -539,8 +539,8 @@ p {
   transition: color 0.2s;
 }
 .loader-mark {
-  width: 128px;
-  height: 88px;
+  width: 112px;
+  height: 80px;
   display: grid;
   place-items: center;
 }
@@ -552,8 +552,8 @@ p {
   color: var(--accent);
 }
 .loader-icon {
-  width: 72px;
-  height: 72px;
+  width: 64px;
+  height: 64px;
   flex-shrink: 0;
   object-fit: contain;
   object-position: center;
@@ -568,9 +568,13 @@ p {
   image-rendering: pixelated;
 }
 .loader-icon-forge {
-  width: 120px;
+  width: 96px;
   filter: brightness(0);
   opacity: 0.58;
+}
+.loader-icon-quilt {
+  position: relative;
+  left: 3px;
 }
 :root[data-theme="dark"] .loader-icon {
   filter: grayscale(1) brightness(1.3);
@@ -615,7 +619,7 @@ p {
   background: linear-gradient(
     145deg,
     var(--surface) 30%,
-    color-mix(in srgb, var(--gold-soft) 55%, var(--surface))
+    color-mix(in srgb, var(--gold-soft) 20%, var(--surface))
   );
 }
 .feature-card-1 {
@@ -650,47 +654,28 @@ p {
   user-select: none;
 }
 .instance-illustration {
-  position: absolute;
-  inset: 145px 0 0;
-}
-.feature-orbits {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  stroke: var(--accent);
-  stroke-width: 0.8;
-  opacity: 0.17;
+  display: grid;
+  gap: 10px;
+  margin-top: 36px;
 }
 .mini-instance {
-  position: absolute;
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 18px;
+  padding: 16px;
   border: 1px solid var(--border);
-  border-radius: 13px;
-  background: var(--surface);
-  box-shadow: 0 12px 24px #0000000b;
-  width: 78%;
-  left: 11%;
+  border-radius: 10px;
+  background: var(--bg);
 }
 .mini-instance-back {
-  top: 8px;
-  transform: rotate(-5deg);
   color: var(--secondary);
 }
-.mini-instance-back > svg {
-  margin-left: auto;
-}
 .mini-instance-front {
-  top: 72px;
-  transform: rotate(3deg);
-  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+  border-color: color-mix(in srgb, var(--accent) 28%, var(--border));
 }
 .mini-world {
-  width: 47px;
-  height: 47px;
+  width: 40px;
+  height: 40px;
   flex-shrink: 0;
   display: grid;
   place-items: center;
@@ -712,14 +697,6 @@ p {
   margin-top: 5px;
   color: var(--muted);
 }
-.mini-instance-meta {
-  display: block;
-  font:
-    9px ui-monospace,
-    monospace;
-  color: var(--muted);
-  margin-top: 11px;
-}
 .mini-play {
   width: 28px;
   height: 28px;
@@ -733,24 +710,11 @@ p {
 .mini-play svg {
   width: 16px;
 }
-.instance-link {
-  position: absolute;
-  bottom: 21px;
-  left: 30px;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  font:
-    10px ui-monospace,
-    monospace;
-  color: var(--muted);
-}
 .mods-illustration {
   padding: 11px;
   border-radius: 12px;
   border: 1px solid var(--border);
   background: var(--bg);
-  transform: rotate(-2deg);
 }
 .mini-mod {
   display: flex;
@@ -794,13 +758,6 @@ p {
   color: var(--accent);
   font-size: 10px;
 }
-.mini-update-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: currentColor;
-  margin-left: auto;
-}
 .feature-card-2 {
   padding-bottom: 16px;
 }
@@ -835,12 +792,8 @@ p {
   display: flex;
   flex: 1;
   align-items: center;
+  justify-content: center;
   color: var(--accent);
-}
-.import-route i {
-  flex: 1;
-  border-top: 1px dashed var(--accent);
-  opacity: 0.45;
 }
 .import-target {
   width: 39px;
@@ -852,90 +805,30 @@ p {
   color: var(--accent);
   border-radius: 10px;
 }
-.import-check {
-  position: absolute;
-  bottom: -4px;
-  right: -4px;
-  width: 16px;
-  height: 16px;
-  display: grid;
-  place-items: center;
-  border: 2px solid var(--surface);
-  border-radius: 50%;
-  color: var(--surface);
-  background: var(--stage-ink);
-}
 .feature-card-3 .feature-copy {
-  max-width: calc(100% - 90px);
+  max-width: calc(100% - 110px);
 }
 .skins-illustration {
   position: absolute;
-  right: 10px;
-  bottom: 12px;
-  width: 100px;
-}
-.skin-figure {
-  display: block;
-  width: 100%;
-  height: 143px;
-}
-.skin-ground {
-  fill: var(--border);
-  opacity: 0.6;
-}
-.skin-cape {
-  fill: var(--accent);
-  opacity: 0.5;
-}
-.skin-shirt {
-  fill: var(--gold);
-}
-.skin-shirt-side {
-  fill: color-mix(in srgb, var(--gold) 70%, #605336);
-}
-.skin-shirt-top {
-  fill: color-mix(in srgb, var(--gold) 65%, #fff);
-}
-.skin-trousers {
-  fill: var(--stage-ink);
-}
-.skin-trousers-side {
-  fill: color-mix(in srgb, var(--stage-ink) 65%, #202624);
-}
-.skin-face,
-.skin-arms {
-  fill: #c4a681;
-}
-.skin-face-side {
-  fill: #9e815e;
-}
-.skin-hair {
-  fill: #63523b;
-}
-.skin-eyes {
-  fill: #414b4b;
-}
-.skin-swatches {
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-}
-.skin-swatches span {
-  width: 19px;
-  height: 19px;
-  border-radius: 5px;
-  background: var(--stage);
+  right: 22px;
+  top: 22px;
+  width: 96px;
+  padding: 7px 5px;
   border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg);
 }
-.skin-swatches span:last-child {
-  background: color-mix(in srgb, var(--accent) 20%, var(--surface));
+.skins-illustration img {
+  width: 84px;
+  height: 112px;
+  object-fit: contain;
 }
-.skin-swatches .selected {
-  background: var(--gold-soft);
-  border-color: var(--accent);
-  color: var(--accent);
-  display: grid;
-  place-items: center;
+.skin-preview-caption {
+  display: block;
+  font-size: 10px;
+  text-align: center;
+  color: var(--secondary);
+  margin-top: 4px;
 }
 .interface-section {
   padding: 46px 0 88px;
@@ -1340,6 +1233,17 @@ body:has(dialog[open]) {
   .feature-card-1 {
     gap: 16px;
   }
+  .feature-card-3 .feature-copy {
+    max-width: calc(100% - 90px);
+  }
+  .skins-illustration {
+    right: 16px;
+    width: 76px;
+  }
+  .skins-illustration img {
+    width: 64px;
+    height: 88px;
+  }
   .project-section {
     gap: 60px;
   }
@@ -1638,11 +1542,14 @@ body:has(dialog[open]) {
     height: 48px;
   }
   .loader-icon {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
   }
   .loader-icon-forge {
-    width: 60px;
+    width: 50px;
+  }
+  .loader-icon-quilt {
+    left: 2px;
   }
   .features {
     grid-template-columns: 1fr;
@@ -1654,27 +1561,20 @@ body:has(dialog[open]) {
     grid-row: auto;
   }
   .feature-card-0 {
-    min-height: 330px;
+    min-height: 310px;
   }
   .feature-card-0 h2 {
     font-size: 23px;
   }
   .instance-illustration {
-    top: 130px;
+    margin-top: 26px;
   }
   .mini-instance {
     padding: 14px;
     gap: 10px;
   }
-  .mini-instance-front {
-    top: 60px;
-  }
   .mini-instance strong {
     font-size: 12px;
-  }
-  .instance-link {
-    bottom: 15px;
-    left: 24px;
   }
   .feature-card-1 {
     min-height: 255px;

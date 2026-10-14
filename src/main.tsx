@@ -375,8 +375,8 @@ function App() {
                     className={`loader-icon loader-icon-${name.toLowerCase()}`}
                     src={asset(`loaders/${icon}`)}
                     alt=""
-                    width="72"
-                    height="72"
+                    width="64"
+                    height="64"
                     aria-hidden="true"
                   />
                 </span>
