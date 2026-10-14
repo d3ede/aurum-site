@@ -17,6 +17,8 @@ Screenshots include Minecraft character textures owned by Mojang/Microsoft. They
 
 These official marks identify supported loaders. Their geometry and ownership are preserved; CSS applies a muted monochrome treatment at rest and restores their colors on hover.
 
+Forge and NeoForge viewports are trimmed to the artwork bounds without changing their paths. Visible artwork is aligned along a shared lower edge; loader names use an accent color on hover. No extra frames or backgrounds are added around the logos.
+
 - Vanilla: [Minecraft website favicon](https://www.minecraft.net/etc.clientlibs/minecraftnet/clientlibs/clientlib-site/resources/favicon-96x96.png), Mojang/Microsoft. Vanilla has no separate loader logo.
 - Fabric: [official Fabric logo](https://fabricmc.net/assets/logo.png). Fabric website content is under [CC BY-NC-SA 4.0](https://fabricmc.net/), unless otherwise indicated.
 - Forge: the anvil path extracted unchanged from the [official Forge logo SVG](https://files.minecraftforge.net/static/images/logo.svg); the wordmark is omitted for a compact icon.

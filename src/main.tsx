@@ -364,7 +364,6 @@ function App() {
           </div>
         </section>
         <section className="loaders container" aria-label={t.loaders}>
-          <span className="loaders-label">{t.loaders}</span>
           <div>
             {[
               { name: "Vanilla", icon: "vanilla.png" },

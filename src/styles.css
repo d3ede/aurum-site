@@ -516,10 +516,6 @@ p {
   text-align: center;
   padding: 30px 0 34px;
 }
-.loaders-label {
-  font-size: 12px;
-  color: var(--muted);
-}
 .loaders > div {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -527,7 +523,7 @@ p {
   justify-content: center;
   gap: 32px;
   max-width: 1020px;
-  margin: 25px auto 0;
+  margin: 0 auto;
 }
 .loaders > div > span {
   display: flex;
@@ -544,28 +540,23 @@ p {
 }
 .loader-mark {
   width: 104px;
-  height: 104px;
+  height: 88px;
   display: grid;
   place-items: center;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  transition:
-    background 0.25s,
-    border-color 0.25s;
 }
-.loader-item:hover .loader-mark {
-  border-color: var(--accent);
-  background: var(--hover);
+.loader-name {
+  color: var(--secondary);
+  transition: color 0.25s;
 }
-.loader-item:hover {
-  color: var(--text);
+.loader-item:hover .loader-name {
+  color: var(--accent);
 }
 .loader-icon {
   width: 72px;
   height: 72px;
   flex-shrink: 0;
   object-fit: contain;
+  object-position: center bottom;
   filter: grayscale(1);
   opacity: 0.9;
   transition:
@@ -577,6 +568,7 @@ p {
   image-rendering: pixelated;
 }
 .loader-icon-forge {
+  width: 88px;
   filter: brightness(0);
   opacity: 0.58;
 }
@@ -1338,12 +1330,9 @@ body:has(dialog[open]) {
   .loaders {
     padding: 24px 0;
   }
-  .loaders-label {
-    font-size: 11px;
-  }
   .loaders > div {
     gap: 8px;
-    margin-top: 20px;
+    margin-top: 0;
   }
   .loaders > div > span {
     font-size: 12px;
@@ -1351,12 +1340,14 @@ body:has(dialog[open]) {
   }
   .loader-mark {
     width: 56px;
-    height: 56px;
-    border-radius: 12px;
+    height: 48px;
   }
   .loader-icon {
     width: 40px;
     height: 40px;
+  }
+  .loader-icon-forge {
+    width: 49px;
   }
   .features {
     padding: 22px 18px;
