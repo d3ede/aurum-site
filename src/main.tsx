@@ -7,17 +7,15 @@ import {
   Box,
   Check,
   Github,
-  Layers3,
   Maximize2,
   Menu,
   Moon,
-  PackageOpen,
-  Shirt,
   Sun,
   X,
 } from "lucide-react";
 import "@fontsource-variable/inter";
 import { DownloadPattern, TerrainPattern } from "./Patterns";
+import { FeatureVisual } from "./FeatureVisuals";
 import "./styles.css";
 
 type Language = "ru" | "en";
@@ -140,7 +138,6 @@ const copy = {
   },
 };
 
-const featureIcons = [Layers3, PackageOpen, ArrowDownToLine, Shirt];
 const screens = [
   { light: "demo-home-light.png", dark: "demo-home-dark.png" },
   { light: "content-light.png", dark: "content-dark.png" },
@@ -393,18 +390,15 @@ function App() {
           className="features container reveal"
           aria-label={t.features}
         >
-          {t.featureItems.map(([title, text], i) => {
-            const Icon = featureIcons[i];
-            return (
-              <article key={i}>
-                <span className="feature-icon">
-                  <Icon size={23} strokeWidth={1.6} />
-                </span>
+          {t.featureItems.map(([title, text], i) => (
+            <article key={i} className={`feature-card feature-card-${i}`}>
+              <div className="feature-copy">
                 <h2>{title}</h2>
                 <p>{text}</p>
-              </article>
-            );
-          })}
+              </div>
+              <FeatureVisual kind={i} language={language} />
+            </article>
+          ))}
         </section>
         <section id="interface" className="interface-section container reveal">
           <div className="section-heading">

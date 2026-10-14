@@ -2,6 +2,7 @@
 
 - `public/assets/aurum.svg`: approved Aurum logo from the launcher repository.
 - `src/Patterns.tsx`: original procedural vector patterns copied from the launcher's `src/components/TerrainPattern.tsx`.
+- `src/FeatureVisuals.tsx`: original code-based illustrations of instance cards, content updates, import and skin selection. The block-style character is a stylized vector illustration, not a Minecraft skin texture; miniature UI elements are decorative, not interactive controls.
 - `public/assets/demo-home-light.png` and `demo-home-dark.png`: newly captured English launcher UI with isolated demonstration fixtures (Player account and Survival instance). Project names, descriptions and icons come from public Modrinth metadata. No personal launcher data is read.
 - `public/assets/content-light.png` and `content-dark.png`: English content-manager previews captured at 1440 × 960, showing the complete table with project icons.
 - `public/assets/skins-light.png` and `skins-dark.png`: English skin-library previews captured at 1440 × 1410, showing the full character, saved skins and all nine defaults. All screenshots use isolated demonstration data in both themes.
