@@ -19,7 +19,7 @@ Open http://127.0.0.1:4173. `npm run build` checks TypeScript and produces `dist
 2. In **Settings → Pages → Build and deployment**, select **GitHub Actions**.
 3. Run the **Deploy to GitHub Pages** workflow (or push to `main`).
 
-The workflow builds and deploys `dist/`. Vite uses `base: './'`, and all image paths use `import.meta.env.BASE_URL`, so both repository subpaths and a custom domain work without editing the code. There is no client-side router or API key requirement.
+The workflow builds and deploys `dist/`. Vite uses `base: './'`, and all image paths use `import.meta.env.BASE_URL`, so both repository subpaths and a custom domain work without editing the code. There is no client-side router.
 
 ## Editing
 
@@ -29,7 +29,7 @@ The workflow builds and deploys `dist/`. Vite uses `base: './'`, and all image p
 - Actual launcher screenshots and branding: `public/assets/`.
 - Theme follows the operating system on first visit; manual theme and language choices are saved locally.
 
-Downloads point to the launcher's latest GitHub release. No analytics or external runtime requests are used. Screenshots contain demonstration data; CurseForge support is described as requiring a key with verification pending.
+Downloads point to the launcher's latest GitHub release. No analytics or external runtime requests are used. Screenshots contain demonstration data. The catalog copy describes search, installation and updates through Modrinth and CurseForge, plus optional search across sources.
 
 ## Assets and license
 

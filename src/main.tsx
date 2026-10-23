@@ -48,7 +48,7 @@ const copy = {
       ],
       [
         "Моды и модпаки",
-        "Каталог Modrinth, версии и обновление установленного контента.",
+        "Modrinth и CurseForge: поиск по всем источникам, установка и обновление контента.",
       ],
       ["Импорт", "Из Modrinth App, .mrpack, ZIP-сборок и папок с игрой."],
       [
@@ -72,7 +72,7 @@ const copy = {
     catalogTitle: "Каталоги контента",
     modrinth: "Поиск, установка и обновление контента.",
     curseforge:
-      "Интеграция через официальный API. Сейчас требуется собственный ключ; проверка с реальным ключом ещё предстоит.",
+      "Поиск, установка и обновление контента через CurseForge.",
     ready: "Скачать Aurum.",
     readyText: "Установщик и новые версии — в GitHub Releases.",
     legal: "Независимый проект. Не связан с Mojang или Microsoft.",
@@ -104,7 +104,7 @@ const copy = {
       ],
       [
         "Mods and modpacks",
-        "Browse Modrinth, choose versions, and update installed content.",
+        "Modrinth and CurseForge: search across sources, install, and update content.",
       ],
       ["Import", "From Modrinth App, .mrpack, ZIP modpacks, and game folders."],
       [
@@ -128,7 +128,7 @@ const copy = {
     catalogTitle: "Content catalogs",
     modrinth: "Find, install, and update content.",
     curseforge:
-      "Official API integration. Currently requires your own key; verification with a real key is still pending.",
+      "Find, install, and update content through CurseForge.",
     ready: "Download Aurum.",
     readyText: "Installers and new versions on GitHub Releases.",
     legal: "An independent project. Not affiliated with Mojang or Microsoft.",
@@ -516,7 +516,7 @@ function App() {
                 <strong>CurseForge</strong>
                 <p>{t.curseforge}</p>
               </div>
-              <span className="api-label">API</span>
+              <Check size={17} />
             </div>
           </div>
         </section>
